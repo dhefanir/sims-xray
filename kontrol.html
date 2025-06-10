@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PANEL KONTROL X-RAY | Solusi Terpadu untuk Pengaturan Presisi</title>
+    <title>Panel Kontrol X-Ray | Media Pembelajaran</title>
     <style>
         * {
             margin: 0;
@@ -162,14 +162,14 @@
         }
 
         /* Features Grid */
-        .features-grid {
+        .concepts-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin: 40px 0;
         }
 
-        .feature-card {
+        .concept-card {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(15px);
             border-radius: 20px;
@@ -181,7 +181,7 @@
             overflow: hidden;
         }
 
-        .feature-card::before {
+        .concept-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -191,12 +191,12 @@
             background: linear-gradient(90deg, #4da6ff, #1a3a5f);
         }
 
-        .feature-card:hover {
+        .concept-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
         }
 
-        .feature-icon {
+        .concept-icon {
             width: 60px;
             height: 60px;
             background: #0c1e35;
@@ -210,46 +210,14 @@
             border: 2px solid #4da6ff;
         }
 
-        .feature-card h4 {
+        .concept-card h4 {
             font-size: 1.4rem;
             color: #ffffff;
             margin-bottom: 15px;
         }
 
-        .feature-card p {
+        .concept-card p {
             font-size: 1rem;
-            color: #e6f0ff;
-        }
-
-        /* Specifications Table */
-        .spec-table {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            border-radius: 15px;
-            overflow: hidden;
-            margin: 30px 0;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .spec-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .spec-table th,
-        .spec-table td {
-            padding: 15px 20px;
-            text-align: left;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .spec-table th {
-            background: rgba(26, 58, 95, 0.3);
-            color: #4da6ff;
-            font-weight: 600;
-        }
-
-        .spec-table td {
             color: #e6f0ff;
         }
 
@@ -429,38 +397,90 @@
             text-align: justify;
         }
 
-        /* CTA Section */
-        .cta-section {
-            text-align: center;
+        /* Parameter Table */
+        .param-table {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 30px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .param-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .param-table th,
+        .param-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .param-table th {
             background: rgba(26, 58, 95, 0.3);
-            backdrop-filter: blur(20px);
-            border-radius: 25px;
-            padding: 50px;
+            color: #4da6ff;
+            font-weight: 600;
+        }
+
+        .param-table td {
+            color: #e6f0ff;
+        }
+
+        /* Effects Visualization */
+        .effects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin: 40px 0;
-            border: 1px solid rgba(77, 166, 255, 0.3);
         }
 
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #4da6ff, #1a5f9e);
-            color: #0c1e35;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            border: none;
-            cursor: pointer;
-            margin-top: 20px;
+        .effect-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
-            background: linear-gradient(45deg, #5ab0ff, #1e6bb8);
-            color: #ffffff;
+        .effect-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #4da6ff, #1a3a5f);
+        }
+
+        .effect-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .effect-visual {
+            width: 100%;
+            height: 200px;
+            background: rgba(12, 30, 53, 0.5);
+            border-radius: 15px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .effect-visual img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
         /* Footer */
@@ -521,389 +541,37 @@
             }
         }
 
-        /* iOS Specific Optimizations */
-        @supports (-webkit-touch-callout: none) {
-            body {
-                -webkit-text-size-adjust: 100%;
-            }
-            
-            .section, .feature-card, .faq-item {
-                -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
-            }
-        }
-
-        /* Touch Device Optimizations */
-        @media (hover: none) and (pointer: coarse) {
-            .feature-card:hover,
-            .section:hover,
-            .faq-item:hover {
-                transform: none;
-                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            }
-            
-            .cta-button:hover {
-                transform: none;
-            }
-        }
-
-        /* Mobile Phones (Portrait) */
-        @media screen and (max-width: 480px) {
-            body {
-                padding: 0;
-            }
-            
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
             .header, .footer {
                 margin: 10px;
                 padding: 20px;
-                border-radius: 15px;
             }
             
             .header h1 {
                 font-size: 2rem;
-                margin-bottom: 15px;
             }
             
             .header p {
                 font-size: 1rem;
-                line-height: 1.5;
-            }
-            
-            .tagline {
-                font-size: 1rem;
-            }
-            
-            .logo {
-                width: 80px;
-                height: 80px;
-                margin-bottom: 20px;
-            }
-            
-            .logo::before {
-                width: 60px;
-                height: 60px;
-            }
-            
-            .logo::after {
-                width: 15px;
-                height: 15px;
-            }
-            
-            .logo .shine {
-                width: 20px;
-                height: 6px;
-                top: 18px;
-                right: 18px;
-            }
-            
-            .main-content {
-                padding: 20px 10px;
             }
             
             .section {
-                margin: 20px 0;
                 padding: 20px 15px;
-                border-radius: 20px;
             }
             
             .section h2 {
                 font-size: 1.8rem;
-                margin-bottom: 20px;
             }
             
-            .section h3 {
-                font-size: 1.4rem;
-                margin: 20px 0 10px 0;
-            }
-            
-            .section p {
-                font-size: 0.95rem;
-                margin-bottom: 15px;
-                text-align: left;
-            }
-            
-            .features-grid {
+            .concepts-grid, .effects-container {
                 grid-template-columns: 1fr;
                 gap: 15px;
-                margin: 20px 0;
             }
             
-            .feature-card {
-                padding: 20px;
-                border-radius: 15px;
-            }
-            
-            .feature-icon {
-                width: 50px;
-                height: 50px;
-                margin-bottom: 15px;
-                font-size: 1.3rem;
-            }
-            
-            .feature-card h4 {
-                font-size: 1.2rem;
-                margin-bottom: 10px;
-            }
-            
-            .feature-card p {
-                font-size: 0.9rem;
-            }
-            
-            .spec-table {
-                overflow-x: auto;
-                border-radius: 10px;
-            }
-            
-            .spec-table th,
-            .spec-table td {
-                padding: 10px 8px;
-                font-size: 0.85rem;
-                white-space: nowrap;
-            }
-            
-            .dashboard-container {
-                padding: 15px;
-            }
-            
-            .dashboard-header {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .dashboard-controls {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .control-item {
-                min-width: 80px;
-                padding: 8px 10px;
-            }
-            
-            .faq-question {
-                padding: 15px 20px;
-            }
-            
-            .faq-question h3 {
-                font-size: 1rem;
-                margin: 0;
-                padding-right: 15px;
-            }
-            
-            .faq-icon {
-                font-size: 0.9rem;
-            }
-            
-            .faq-item.active .faq-answer {
-                padding: 0 20px 20px 20px;
-            }
-            
-            .faq-answer p {
-                font-size: 0.9rem;
-                line-height: 1.5;
-                text-align: left;
-            }
-            
-            .cta-section {
-                padding: 30px 20px;
-                margin: 20px 0;
-                border-radius: 20px;
-            }
-            
-            .cta-section h2 {
-                font-size: 1.8rem;
-                margin-bottom: 15px;
-            }
-            
-            .cta-section p {
-                font-size: 1rem;
-                margin-bottom: 25px;
-            }
-            
-            .cta-button {
-                padding: 12px 30px;
-                font-size: 1rem;
-                border-radius: 25px;
-            }
-        }
-
-        /* Mobile Phones (Landscape) */
-        @media screen and (max-width: 768px) and (orientation: landscape) {
-            .header {
-                padding: 25px;
-            }
-            
-            .logo {
-                width: 70px;
-                height: 70px;
-            }
-            
-            .header h1 {
-                font-size: 1.8rem;
-            }
-            
-            .section {
+            .concept-card, .effect-card {
                 padding: 20px;
             }
-            
-            .features-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-        }
-
-        /* Tablets (Portrait) */
-        @media screen and (min-width: 481px) and (max-width: 768px) {
-            .header, .footer {
-                margin: 15px;
-                padding: 30px;
-            }
-            
-            .header h1 {
-                font-size: 2.5rem;
-            }
-            
-            .header p {
-                font-size: 1.2rem;
-            }
-            
-            .logo {
-                width: 100px;
-                height: 100px;
-            }
-            
-            .section {
-                padding: 30px 25px;
-                margin: 25px 0;
-            }
-            
-            .section h2 {
-                font-size: 2.2rem;
-            }
-            
-            .features-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-            
-            .spec-table th,
-            .spec-table td {
-                padding: 12px 15px;
-                font-size: 0.95rem;
-            }
-            
-            .faq-question {
-                padding: 18px 22px;
-            }
-            
-            .faq-question h3 {
-                font-size: 1.1rem;
-            }
-        }
-
-        /* Tablets (Landscape) & Small Desktops */
-        @media screen and (min-width: 769px) and (max-width: 1024px) {
-            .features-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            
-            .section {
-                padding: 35px 30px;
-            }
-        }
-
-        /* Large Tablets & iPads */
-        @media screen and (min-width: 768px) and (max-width: 1024px) {
-            .container {
-                max-width: 95%;
-            }
-            
-            .header, .footer {
-                margin: 20px;
-            }
-        }
-
-        /* iPad Pro Specific */
-        @media screen 
-        and (min-device-width: 1024px) 
-        and (max-device-width: 1366px)
-        and (-webkit-min-device-pixel-ratio: 2) {
-            .features-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 25px;
-            }
-            
-            .section {
-                padding: 40px 35px;
-            }
-        }
-
-        /* iPhone X and similar with notch */
-        @media screen 
-        and (device-width: 375px) 
-        and (device-height: 812px) 
-        and (-webkit-device-pixel-ratio: 3) {
-            body {
-                padding-top: env(safe-area-inset-top);
-                padding-bottom: env(safe-area-inset-bottom);
-            }
-            
-            .header {
-                margin-top: 20px;
-            }
-        }
-
-        /* iPhone Plus Series */
-        @media screen 
-        and (min-device-width: 414px) 
-        and (max-device-width: 414px) {
-            .features-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .section p {
-                font-size: 1rem;
-            }
-        }
-
-        /* Improved Touch Targets */
-        @media (max-width: 768px) {
-            .faq-question {
-                min-height: 44px;
-                display: flex;
-                align-items: center;
-            }
-            
-            .cta-button {
-                min-height: 44px;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            /* Prevent zoom on input focus for iOS */
-            select, input, textarea {
-                font-size: 16px;
-            }
-        }
-
-        /* Scrollbar Styling */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: rgba(77, 166, 255, 0.3);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: rgba(77, 166, 255, 0.5);
         }
     </style>
 </head>
@@ -913,21 +581,21 @@
             <div class="logo">
                 <div class="shine"></div>
             </div>
-            <h1>PANEL KONTROL X-RAY</h1>
-            <p>Solusi Terpadu untuk Pengaturan Presisi Parameter X-Ray</p>
-            <p class="tagline">Tegangan • Arus • Waktu Eksposur • Kontrol Lengkap</p>
+            <h1>PEMAHAMAN PANEL KONTROL X-RAY</h1>
+            <p>Media Pembelajaran Interaktif untuk Memahami Parameter Radiografi</p>
+            <p class="tagline">Tegangan • Arus • Waktu Eksposur • Prinsip Kerja</p>
         </header>
 
         <main class="main-content">
             <!-- Overview Section -->
             <section class="section">
-                <h2>Mengontrol X-Ray dengan Presisi</h2>
-                <p>Panel Kontrol X-Ray kami dirancang untuk memberikan operator kontrol penuh atas semua parameter penting dalam operasi mesin X-Ray. Dengan antarmuka yang intuitif dan sistem yang andal, Anda dapat mengatur tegangan, arus, waktu eksposur, dan parameter kritis lainnya dengan akurasi yang belum pernah ada sebelumnya.</p>
+                <h2>Memahami Parameter Dasar Radiografi</h2>
+                <p>Panel kontrol mesin X-Ray memungkinkan operator mengatur parameter kunci yang mempengaruhi kualitas gambar dan dosis radiasi. Pemahaman yang baik tentang hubungan antara tegangan (kV), arus (mA), dan waktu eksposur sangat penting untuk menghasilkan gambar diagnostik yang optimal dengan dosis radiasi minimal.</p>
                 
                 <div class="dashboard-preview">
                     <div class="dashboard-container">
                         <div class="dashboard-header">
-                            <div class="dashboard-title">Kontrol Operasi X-Ray</div>
+                            <div class="dashboard-title">Simulator Parameter Radiografi</div>
                             <div class="dashboard-controls">
                                 <div class="control-item">
                                     <div class="control-label">Tegangan (kV)</div>
@@ -951,6 +619,7 @@
                                     <span id="voltage-display">120 kV</span>
                                 </div>
                                 <input type="range" min="40" max="150" value="120" class="slider" id="voltage-slider">
+                                <div id="voltage-info" class="effect-info">Meningkatkan energi sinar-X dan kemampuan penetrasi</div>
                             </div>
                             
                             <div class="slider-container">
@@ -959,6 +628,7 @@
                                     <span id="current-display">3.5 mA</span>
                                 </div>
                                 <input type="range" min="0.5" max="10" step="0.1" value="3.5" class="slider" id="current-slider">
+                                <div id="current-info" class="effect-info">Meningkatkan jumlah foton yang dihasilkan</div>
                             </div>
                             
                             <div class="slider-container">
@@ -967,97 +637,122 @@
                                     <span id="time-display">0.8 s</span>
                                 </div>
                                 <input type="range" min="0.1" max="5" step="0.1" value="0.8" class="slider" id="time-slider">
+                                <div id="time-info" class="effect-info">Meningkatkan durasi paparan radiasi</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Features Section -->
+            <!-- Concepts Section -->
             <section class="section">
-                <h2>Fitur Unggulan</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">⚙️</div>
-                        <h4>Kontrol Presisi Tinggi</h4>
-                        <p>Akurasi pengaturan hingga 0.1kV untuk tegangan dan 0.01mA untuk arus, memastikan hasil pencitraan yang konsisten.</p>
+                <h2>Konsep Dasar Parameter X-Ray</h2>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-icon">⚡</div>
+                        <h4>Tegangan (kV)</h4>
+                        <p>Mengatur energi sinar-X. kV yang lebih tinggi menghasilkan sinar-X dengan energi lebih besar dan daya tembus yang lebih baik. Digunakan untuk menembus jaringan yang lebih tebal atau padat.</p>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📊</div>
-                        <h4>Monitoring Real-time</h4>
-                        <p>Pemantauan parameter operasi secara real-time dengan tampilan visual yang jelas dan intuitif.</p>
+                    <div class="concept-card">
+                        <div class="concept-icon">🔋</div>
+                        <h4>Arus (mA)</h4>
+                        <p>Mengatur jumlah elektron yang mengalir dari katoda ke anoda. mA yang lebih tinggi menghasilkan lebih banyak foton sinar-X, meningkatkan intensitas radiasi.</p>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🔒</div>
-                        <h4>Sistem Keamanan</h4>
-                        <p>Proteksi otomatis terhadap pengaturan yang tidak aman dengan sistem interlock canggih.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">💾</div>
-                        <h4>Penyimpanan Preset</h4>
-                        <p>Simpan hingga 50 pengaturan preset untuk berbagai jenis pemeriksaan dan pasien.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📶</div>
-                        <h4>Konektivitas Lengkap</h4>
-                        <p>Dukungan untuk koneksi USB, Ethernet, dan RS-232 untuk integrasi dengan sistem lain.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🔄</div>
-                        <h4>Pembaruan Firmware</h4>
-                        <p>Kemampuan pembaruan firmware secara berkala untuk fitur dan keamanan terbaru.</p>
+                    <div class="concept-card">
+                        <div class="concept-icon">⏱️</div>
+                        <h4>Waktu Eksposur</h4>
+                        <p>Durasi saat tabung sinar-X aktif memancarkan radiasi. Waktu yang lebih lama memungkinkan lebih banyak foton mencapai detektor, meningkatkan kualitas gambar tetapi juga meningkatkan dosis radiasi.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Specifications Section -->
+            <!-- Parameter Effects Section -->
             <section class="section">
-                <h2>Spesifikasi Teknis</h2>
-                <div class="spec-table">
+                <h2>Efek Perubahan Parameter</h2>
+                <div class="effects-container">
+                    <div class="effect-card">
+                        <h4>Pengaruh kV</h4>
+                        <div class="effect-visual">
+                            <div id="kv-visual" style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                                <div style="text-align: center;">
+                                    <div style="font-size: 2rem; margin-bottom: 10px;">⚡</div>
+                                    <div style="font-size: 1.2rem;">Energi: <span id="energy-value">120 keV</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>kV menentukan kualitas radiasi: 
+                            <ul style="text-align: left; padding-left: 20px; margin-top: 10px;">
+                                <li>kV rendah: Kontras tinggi, detail jaringan lunak lebih baik</li>
+                                <li>kV tinggi: Kontras rendah, daya tembus lebih baik untuk jaringan padat</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="effect-card">
+                        <h4>Pengaruh mA & Waktu</h4>
+                        <div class="effect-visual">
+                            <div id="dose-visual" style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                                <div style="text-align: center;">
+                                    <div style="font-size: 2rem; margin-bottom: 10px;">⚠️</div>
+                                    <div style="font-size: 1.2rem;">Dosis: <span id="dose-value">3.36 mGy</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Produk mAs (mA × detik) menentukan kuantitas radiasi:
+                            <ul style="text-align: left; padding-left: 20px; margin-top: 10px;">
+                                <li>mAs tinggi: Gambar lebih terang, noise lebih rendah</li>
+                                <li>mAs rendah: Gambar lebih gelap, noise lebih tinggi</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Parameter Table Section -->
+            <section class="section">
+                <h2>Parameter untuk Berbagai Pemeriksaan</h2>
+                <div class="param-table">
                     <table>
                         <tr>
-                            <th>Parameter</th>
-                            <th>Spesifikasi</th>
+                            <th>Pemeriksaan</th>
+                            <th>Tegangan (kV)</th>
+                            <th>Arus (mA)</th>
+                            <th>Waktu (s)</th>
+                            <th>Keterangan</th>
                         </tr>
                         <tr>
-                            <td>Rentang Tegangan</td>
-                            <td>40kV - 150kV (akurasi ±0.5%)</td>
+                            <td>Thorax (Dada)</td>
+                            <td>110-125</td>
+                            <td>3-5</td>
+                            <td>0.02-0.05</td>
+                            <td>Tinggi kV untuk mengurangi kontras tulang rusuk</td>
                         </tr>
                         <tr>
-                            <td>Rentang Arus</td>
-                            <td>0.5mA - 10mA (akurasi ±0.1mA)</td>
+                            <td>Abdomen (Perut)</td>
+                            <td>70-85</td>
+                            <td>30-50</td>
+                            <td>0.5-1.0</td>
+                            <td>mAs tinggi untuk jaringan tebal</td>
                         </tr>
                         <tr>
-                            <td>Waktu Eksposur</td>
-                            <td>0.1s - 5.0s (increment 0.01s)</td>
+                            <td>Ekstremitas (Tangan/Kaki)</td>
+                            <td>50-60</td>
+                            <td>2-4</td>
+                            <td>0.02-0.05</td>
+                            <td>Rendah kV untuk kontras tinggi</td>
                         </tr>
                         <tr>
-                            <td>Dimensi</td>
-                            <td>430mm × 320mm × 150mm</td>
+                            <td>Gigi Periapikal</td>
+                            <td>60-70</td>
+                            <td>7-10</td>
+                            <td>0.2-0.5</td>
+                            <td>Fokus pada detail gigi</td>
                         </tr>
                         <tr>
-                            <td>Berat</td>
-                            <td>8.5 kg</td>
-                        </tr>
-                        <tr>
-                            <td>Daya</td>
-                            <td>220V AC, 50/60Hz, 500W</td>
-                        </tr>
-                        <tr>
-                            <td>Tampilan</td>
-                            <td>Touchscreen LCD 10 inci (1280×800)</td>
-                        </tr>
-                        <tr>
-                            <td>Konektivitas</td>
-                            <td>USB 3.0, Ethernet, RS-232, Wi-Fi</td>
-                        </tr>
-                        <tr>
-                            <td>Sistem Operasi</td>
-                            <td>Embedded Linux dengan antarmuka khusus</td>
-                        </tr>
-                        <tr>
-                            <td>Sertifikasi</td>
-                            <td>CE, IEC 60601-1, ISO 13485</td>
+                            <td>Mammografi</td>
+                            <td>25-35</td>
+                            <td>50-100</td>
+                            <td>1.0-2.0</td>
+                            <td>kV sangat rendah untuk kontras jaringan lunak</td>
                         </tr>
                     </table>
                 </div>
@@ -1069,63 +764,74 @@
                 <div class="faq-container">
                     <div class="faq-item">
                         <div class="faq-question">
-                            <h3>Apakah panel kontrol ini kompatibel dengan semua mesin X-Ray?</h3>
+                            <h3>Mengapa kV memengaruhi kontras gambar radiografi?</h3>
                             <span class="faq-icon">▼</span>
                         </div>
                         <div class="faq-answer">
-                            <p>Panel kontrol kami dirancang untuk kompatibilitas luas dengan berbagai merek dan model mesin X-Ray diagnostik. Kami menyediakan berbagai antarmuka koneksi dan dapat dikustomisasi sesuai kebutuhan sistem Anda. Silakan hubungi tim teknis kami untuk konfirmasi kompatibilitas dengan perangkat spesifik Anda.</p>
+                            <p>kV menentukan energi sinar-X yang mempengaruhi perbedaan serapan antara berbagai jenis jaringan. kV rendah menghasilkan perbedaan serapan yang lebih besar antara jaringan (misalnya antara tulang dan otot), sehingga menghasilkan gambar dengan kontras tinggi. kV tinggi menghasilkan sinar-X yang lebih homogen dalam menembus jaringan, menghasilkan gambar dengan kontras lebih rendah tetapi dengan rentang dinamis yang lebih baik.</p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">
-                            <h3>Bagaimana sistem keamanan pada panel ini melindungi operator dan pasien?</h3>
+                            <h3>Bagaimana hubungan antara mAs dan noise gambar?</h3>
                             <span class="faq-icon">▼</span>
                         </div>
                         <div class="faq-answer">
-                            <p>Panel kami dilengkapi dengan sistem proteksi multi-level: (1) Batasan parameter yang dapat diprogram untuk mencegah pengaturan di luar rentang aman, (2) Sistem interlock yang menghentikan operasi jika terdeteksi ketidaksesuaian parameter, (3) Pemantauan real-time dengan alarm visual dan suara untuk kondisi abnormal, (4) Log operasi terenkripsi untuk audit keselamatan.</p>
+                            <p>Produk mAs (milliampere-seconds) menentukan jumlah total foton yang mencapai detektor. mAs yang lebih tinggi menghasilkan lebih banyak foton, yang berarti sinyal yang lebih kuat dibandingkan dengan noise acak yang selalu ada dalam sistem. Secara praktis, menggandakan mAs akan mengurangi noise sekitar 30% (sesuai akar kuadrat dari peningkatan jumlah foton). Namun, peningkatan mAs juga meningkatkan dosis radiasi pada pasien.</p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">
-                            <h3>Apakah panel ini mendukung pembaruan perangkat lunak?</h3>
+                            <h3>Kapan sebaiknya menggunakan waktu eksposur pendek?</h3>
                             <span class="faq-icon">▼</span>
                         </div>
                         <div class="faq-answer">
-                            <p>Ya, panel kontrol kami dirancang dengan arsitektur yang dapat diperbarui. Pembaruan firmware dapat dilakukan melalui USB atau koneksi jaringan untuk menambahkan fitur baru, meningkatkan kinerja, dan memperkuat keamanan. Semua pembaruan dienkripsi dan diverifikasi sebelum instalasi.</p>
+                            <p>Waktu eksposur pendek (biasanya di bawah 0.1 detik) digunakan untuk:</p>
+                            <ul>
+                                <li>Pemeriksaan pada bagian tubuh yang bergerak (jantung, paru-paru)</li>
+                                <li>Pasien yang tidak bisa diam (anak-anak, pasien gelisah)</li>
+                                <li>Mengurangi blur akibat pergerakan pasien</li>
+                                <li>Prosedur fluoroskopi yang membutuhkan frame rate tinggi</li>
+                            </ul>
+                            <p>Tetapi waktu yang lebih pendek membutuhkan mA yang lebih tinggi untuk mempertahankan mAs yang dibutuhkan.</p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">
-                            <h3>Berapa lama masa garansi untuk produk ini?</h3>
+                            <h3>Apa itu hukum kuadrat terbalik dalam radiografi?</h3>
                             <span class="faq-icon">▼</span>
                         </div>
                         <div class="faq-answer">
-                            <p>Kami memberikan garansi 3 tahun untuk panel kontrol X-Ray ini, yang mencakup komponen dan perbaikan. Untuk layar sentuh, garansi khusus 2 tahun diberikan. Dukungan teknis tersedia 24/7 selama masa garansi. Setelah masa garansi, kami menawarkan paket perawatan tahunan yang komprehensif.</p>
+                            <p>Hukum kuadrat terbalik menjelaskan hubungan antara intensitas radiasi dan jarak dari sumber. Intensitas radiasi berbanding terbalik dengan kuadrat jarak dari sumber radiasi. Artinya, jika jarak antara pasien dan tabung sinar-X digandakan, intensitas radiasi yang mencapai pasien akan menjadi seperempatnya. Prinsip ini penting dalam proteksi radiasi - semakin jauh pasien dari sumber radiasi, semakin kecil dosis yang diterima.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- CTA Section -->
-            <section class="cta-section">
-                <h2>Siap Mengoptimalkan Operasi X-Ray Anda?</h2>
-                <p>Tingkatkan presisi, keamanan, dan efisiensi dengan panel kontrol X-Ray terdepan di industri. Jadwalkan demo tanpa biaya hari ini!</p>
-                <button class="cta-button" id="demoBtn">Minta Demo Gratis</button>
+            <!-- Conclusion Section -->
+            <section class="section">
+                <h2>Kesimpulan</h2>
+                <p>Pemahaman mendalam tentang parameter panel kontrol X-Ray merupakan fondasi penting dalam radiografi diagnostik. Operator yang terampil harus mampu menyeimbangkan antara kualitas gambar yang diinginkan dan prinsip ALARA (As Low As Reasonably Achievable) dalam proteksi radiasi.</p>
+                
+                <p>Beberapa prinsip kunci:</p>
+                <ul style="padding-left: 30px; margin-top: 15px;">
+                    <li>kV terutama memengaruhi kontras dan daya tembus gambar</li>
+                    <li>mAs (mA × detik) menentukan kecerahan gambar dan jumlah noise</li>
+                    <li>Waktu eksposur pendek mengurangi motion blur tetapi membutuhkan mA tinggi</li>
+                    <li>Setiap jenis pemeriksaan membutuhkan kombinasi parameter yang berbeda</li>
+                    <li>Pemilihan parameter harus mempertimbangkan dosis radiasi pada pasien</li>
+                </ul>
             </section>
         </main>
 
         <footer class="footer">
-            <p>&copy; 2023 Panel Kontrol X-Ray | Solusi Pengaturan Presisi untuk Operator Profesional</p>
-            <p>Didesain dan Diproduksi dengan Standar Kualitas Tertinggi</p>
+            <p>&copy; 2023 Media Pembelajaran Panel Kontrol X-Ray | Untuk tujuan edukasi radiografi</p>
+            <p>Dikembangkan sebagai alat bantu pembelajaran teknologi radiologi</p>
         </footer>
     </div>
 
     <script>
-        // Initialize mobile detection
-        let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        let isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-        
-        // Slider functionality
+        // Initialize elements
         const voltageSlider = document.getElementById('voltage-slider');
         const currentSlider = document.getElementById('current-slider');
         const timeSlider = document.getElementById('time-slider');
@@ -1138,20 +844,62 @@
         const currentValue = document.getElementById('current-value');
         const timeValue = document.getElementById('time-value');
         
-        voltageSlider.addEventListener('input', function() {
-            voltageDisplay.textContent = this.value + ' kV';
-            voltageValue.textContent = this.value;
-        });
+        const energyValue = document.getElementById('energy-value');
+        const doseValue = document.getElementById('dose-value');
         
-        currentSlider.addEventListener('input', function() {
-            currentDisplay.textContent = this.value + ' mA';
-            currentValue.textContent = this.value;
-        });
+        // Update parameter displays
+        function updateParameters() {
+            const kV = parseInt(voltageSlider.value);
+            const mA = parseFloat(currentSlider.value);
+            const time = parseFloat(timeSlider.value);
+            
+            // Update display values
+            voltageDisplay.textContent = kV + ' kV';
+            currentDisplay.textContent = mA + ' mA';
+            timeDisplay.textContent = time + ' s';
+            
+            voltageValue.textContent = kV;
+            currentValue.textContent = mA;
+            timeValue.textContent = time;
+            
+            // Calculate and display effects
+            energyValue.textContent = kV + ' keV';
+            
+            // Simple dose calculation (for educational purposes only)
+            const dose = (kV * mA * time / 500).toFixed(2);
+            doseValue.textContent = dose + ' mGy';
+            
+            // Update visual effects
+            updateVisuals(kV, mA, time);
+        }
         
-        timeSlider.addEventListener('input', function() {
-            timeDisplay.textContent = this.value + ' s';
-            timeValue.textContent = this.value;
-        });
+        // Update visual representations
+        function updateVisuals(kV, mA, time) {
+            // kV effect - energy level visualization
+            const energyLevel = document.getElementById('kv-visual');
+            const energyIntensity = Math.min(1, kV / 150);
+            const hue = 200 + (55 * (1 - energyIntensity)); // Blue to white gradient
+            
+            energyLevel.style.background = `radial-gradient(circle, 
+                hsl(${hue}, 80%, ${70 + (30 * energyIntensity)}%) 0%, 
+                hsl(${hue}, 80%, ${40 + (30 * energyIntensity)}%) 70%, 
+                hsl(200, 80%, 20%) 100%)`;
+            
+            // Dose visualization
+            const doseLevel = document.getElementById('dose-visual');
+            const doseIntensity = Math.min(1, (kV * mA * time) / 5000);
+            const doseHue = 40 - (40 * doseIntensity); // Yellow to red gradient
+            
+            doseLevel.style.background = `radial-gradient(circle, 
+                hsla(${doseHue}, 100%, 60%, ${0.3 + (0.7 * doseIntensity)}) 0%, 
+                hsla(${doseHue}, 100%, 40%, ${0.2 + (0.8 * doseIntensity)}) 70%, 
+                transparent 100%)`;
+        }
+        
+        // Event listeners for sliders
+        voltageSlider.addEventListener('input', updateParameters);
+        currentSlider.addEventListener('input', updateParameters);
+        timeSlider.addEventListener('input', updateParameters);
         
         // FAQ functionality
         document.querySelectorAll('.faq-question').forEach(question => {
@@ -1171,57 +919,8 @@
             });
         });
         
-        // Demo button animation
-        const demoBtn = document.getElementById('demoBtn');
-        demoBtn.addEventListener('mouseenter', function() {
-            this.style.animation = 'pulse 1.5s infinite';
-        });
-        
-        demoBtn.addEventListener('mouseleave', function() {
-            this.style.animation = 'none';
-        });
-        
-        // Parallax effect for sections
-        window.addEventListener('scroll', () => {
-            const scrolled = window.scrollY;
-            const sections = document.querySelectorAll('.section');
-            
-            sections.forEach((section, index) => {
-                const rate = scrolled * -0.5;
-                section.style.transform = `translateY(${rate * 0.05}px)`;
-            });
-        });
-        
-        // Create background particles
-        function createParticle() {
-            if (document.visibilityState !== 'visible') return;
-            
-            const particle = document.createElement('div');
-            particle.style.position = 'fixed';
-            particle.style.width = Math.random() * 5 + 2 + 'px';
-            particle.style.height = particle.style.width;
-            particle.style.background = 'rgba(77, 166, 255, 0.4)';
-            particle.style.borderRadius = '50%';
-            particle.style.pointerEvents = 'none';
-            particle.style.zIndex = '1';
-            particle.style.left = Math.random() * window.innerWidth + 'px';
-            particle.style.top = window.innerHeight + 'px';
-            particle.style.animation = `float ${Math.random() * 6 + 4}s linear infinite`;
-            
-            document.body.appendChild(particle);
-            
-            setTimeout(() => {
-                particle.remove();
-            }, 10000);
-        }
-        
-        // Create particles periodically
-        setInterval(createParticle, 1000);
-        
-        // Initial particles
-        for (let i = 0; i < 20; i++) {
-            setTimeout(createParticle, i * 150);
-        }
+        // Initialize parameters
+        updateParameters();
         
         // Page load animation
         window.addEventListener('load', () => {
@@ -1231,39 +930,6 @@
                 document.body.style.opacity = '1';
             }, 100);
         });
-        
-        // Demo button functionality
-        demoBtn.addEventListener('click', function() {
-            this.textContent = 'Permintaan Terkirim!';
-            this.style.background = 'linear-gradient(45deg, #2ecc71, #27ae60)';
-            
-            setTimeout(() => {
-                this.innerHTML = 'Minta Demo Gratis <span style="font-size:0.8em">✓</span>';
-            }, 1500);
-        });
-        
-        // Dynamic logo animation
-        const logo = document.querySelector('.logo');
-        
-        document.addEventListener('scroll', () => {
-            const scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-            const rotationSpeed = 1 + scrollPercent * 3;
-            logo.style.animationDuration = (10 / rotationSpeed) + 's';
-        });
-        
-        // Mobile-specific optimizations
-        if (isMobile) {
-            // Disable hover effects on mobile
-            const cards = document.querySelectorAll('.feature-card, .section, .faq-item');
-            cards.forEach(card => {
-                card.style.transform = 'none';
-                card.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.2)';
-            });
-            
-            // Reduce particle density on mobile
-            clearInterval(particleInterval);
-            setInterval(createParticle, 2000);
-        }
     </script>
 </body>
 </html>
